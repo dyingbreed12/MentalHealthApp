@@ -17,13 +17,16 @@ This is a full-stack mini-application built for a practical exam. It allows empl
 
 ### 2. Set up the Backend
 1. Navigate to the backend directory:
+
    `cd MentalHealthApp.Api`
-2. Rebuild the solution and run the database migrations:
+3. Rebuild the solution and run the database migrations:
+
    `dotnet build`
    
    `dotnet ef database update`
 4. Run the backend application:
-   `dotnet run`
+
+    `dotnet run`
 The API will run on `http://localhost:5062`.
 
 ### 3. Set up the Frontend
