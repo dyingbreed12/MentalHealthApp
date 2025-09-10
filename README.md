@@ -20,8 +20,9 @@ This is a full-stack mini-application built for a practical exam. It allows empl
    `cd MentalHealthApp.Api`
 2. Rebuild the solution and run the database migrations:
    `dotnet build`
+   
    `dotnet ef database update`
-3. Run the backend application:
+4. Run the backend application:
    `dotnet run`
 The API will run on `http://localhost:5062`.
 
