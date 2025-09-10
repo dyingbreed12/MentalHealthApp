@@ -27,6 +27,7 @@ This is a full-stack mini-application built for a practical exam. It allows empl
 4. Run the backend application:
 
     `dotnet run`
+
 The API will run on `http://localhost:5062`.
 
 ### 3. Set up the Frontend
