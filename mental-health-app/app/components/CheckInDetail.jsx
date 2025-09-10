@@ -50,7 +50,7 @@ export const CheckInDetail = ({ id }) => {
     }
   };
 
-  const canEdit = user && (user.role === 'manager' || (user.role === 'employee' && user.id === checkIn?.userId));
+  const canEdit = user && (user.role === 'manager' || user.role === 'employee' );
 
   if (isLoading) return <div className="text-center p-8">Loading check-in details...</div>;
   if (error || !checkIn) return notFound();

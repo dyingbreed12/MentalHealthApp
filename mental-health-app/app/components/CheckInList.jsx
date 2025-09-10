@@ -19,6 +19,8 @@ export const CheckInList = () => {
 
   useEffect(() => {
     const today = new Date();
+    // Adds 7 days to the current date.
+    today.setDate(today.getDate() + 7);
     const last30Days = new Date(today.getFullYear(), today.getMonth(), today.getDate() - 30);
     setFromDate(last30Days.toISOString().slice(0, 10));
     setToDate(today.toISOString().slice(0, 10));
