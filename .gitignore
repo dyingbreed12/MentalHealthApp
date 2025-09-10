@@ -1,0 +1,24 @@
+.next
+node_modules
+bin
+obj
+checkins.db
+# Visual Studio
+.vs/
+*.vsidx
+
+# Binaries and intermediate files
+[Bb]in/
+[Oo]bj/
+*.exe
+*.pdb
+
+# Frontend dependencies and build files
+/mental-health-app/node_modules/
+/mental-health-app/.next/
+/mental-health-app/coverage/
+
+# Database files
+*.db
+*.db-shm
+*.db-wal
