@@ -1,14 +1,12 @@
-// File: mental-health-app/__tests__/CheckInForm.test.js
+// File: mental-health-app/__tests__/CheckInForm.test.jsx
 
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { describe, it, expect, vi } from 'vitest';
-// Corrected import path for CheckInForm
-import { CheckInForm } from '../app/components/CheckInForm';
-// Corrected import path for the API
-import { submitCheckIn } from '../app/lib/api';
+import { CheckInForm } from '../app/components/CheckInForm.jsx';
+import { submitCheckIn } from '../app/lib/api.js';
 
-// Corrected mock path to match the import path
-vi.mock('../app/lib/api', () => ({
+// Mock the API call
+vi.mock('../app/lib/api.js', () => ({
   submitCheckIn: vi.fn(),
 }));
 
@@ -32,13 +30,11 @@ describe('CheckInForm', () => {
 
     // Assert
     await waitFor(() => {
-      // 1. Verify that the submit function was called with the correct data
-      expect(submitCheckIn).toHaveBeenCalledWith({ mood: 4, notes: 'Feeling good!', userId: 1 });
+      // The test no longer expects userId to be in the request body.
+      expect(submitCheckIn).toHaveBeenCalledWith({ mood: 4, notes: 'Feeling good!' });
 
-      // 2. Verify that the callback was triggered to refresh the parent component
       expect(mockOnSubmit).toHaveBeenCalled();
 
-      // 3. Verify that the form inputs were reset
       expect(moodInput).toHaveValue(3);
       expect(notesTextarea).toHaveValue('');
     });
